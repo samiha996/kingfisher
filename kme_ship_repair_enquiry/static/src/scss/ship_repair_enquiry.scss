@@ -1,0 +1,601 @@
+// KME Ship Repair Enquiry form.
+// Every rule is scoped to `.kme-enquiry` (the form snippet) or
+// `.kme-quote-layout` (the section holding it) so no other page is affected.
+// Values follow the designer's reference "KME_Request_a_Quotation_Revised_Interactive".
+
+.kme-enquiry {
+    --kme-navy: #0c3048;
+    --kme-orange: #e67823;
+    --kme-orange-dark: #cc5f12;
+    --kme-ink: #1a3345;
+
+    // The snippet's inner Bootstrap container would add side padding inside
+    // the grid column; the reference card spans the full column width.
+    > .container {
+        padding-left: 0;
+        padding-right: 0;
+        max-width: none;
+    }
+
+    .kme-form-card {
+        background: #fff;
+        border: 1px solid #e1e9ee;
+        border-radius: 12px;
+        box-shadow: 0 24px 55px rgba(19, 48, 69, 0.085);
+        overflow: hidden;
+        color: var(--kme-ink);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .kme-required {
+        color: #d76e21;
+    }
+
+    // Header ---------------------------------------------------------------
+    .kme-form-head {
+        padding: 27px 32px;
+        border-bottom: 1px solid #e6eef2;
+        background: #fff;
+
+        .kme-form-title {
+            font-size: 23px;
+            line-height: 1.25;
+            letter-spacing: -0.4px;
+            font-weight: 800;
+            color: var(--kme-navy);
+            margin: 0;
+        }
+        p {
+            color: #6d8392;
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 9px 0 0;
+        }
+    }
+
+    // Sections -------------------------------------------------------------
+    .kme-form-section {
+        padding: 27px 32px 28px;
+        border-bottom: 1px solid #ecf0f3;
+    }
+    .kme-section-title {
+        display: flex;
+        gap: 13px;
+        align-items: center;
+        margin-bottom: 19px;
+
+        h4 {
+            font-size: 16px;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--kme-navy);
+            margin: 0;
+        }
+        small {
+            display: block;
+            font-size: 12px;
+            color: #8da0ac;
+            margin-top: 3px;
+        }
+    }
+    .kme-number {
+        height: 32px;
+        width: 32px;
+        flex-shrink: 0;
+        background: #f7eadf;
+        color: #c8681e;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        font-size: 13px;
+        font-weight: 900;
+    }
+
+    // 01 Service cards ------------------------------------------------------
+    .kme-service-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .kme-service-input {
+        // Visually hidden, still focusable and announced as a radio button.
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+        opacity: 0;
+    }
+    .kme-service-card {
+        position: relative;
+        text-align: left;
+        background: #fff;
+        border: 1.5px solid #dce6ec;
+        border-radius: 8px;
+        min-height: 77px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 13px;
+        margin: 0;
+        cursor: pointer;
+        transition: border-color 0.16s, background-color 0.16s, box-shadow 0.16s;
+
+        &:hover {
+            border-color: #d69f75;
+            background: #fffaf5;
+        }
+        &:has(.kme-service-input:checked) {
+            border-color: var(--kme-orange);
+            background: #fff6ee;
+            box-shadow: 0 0 0 1px var(--kme-orange) inset;
+
+            .kme-sc-icon {
+                background: #ffe6d0;
+                color: #c3651c;
+            }
+            .kme-sc-check {
+                opacity: 1;
+            }
+        }
+        &:has(.kme-service-input:focus-visible) {
+            outline: 3px solid #61a7e3;
+            outline-offset: 3px;
+        }
+    }
+    .kme-sc-icon {
+        height: 36px;
+        width: 36px;
+        background: #f1f5f7;
+        border-radius: 8px;
+        display: grid;
+        place-items: center;
+        flex-shrink: 0;
+        color: #22536c;
+
+        svg {
+            height: 19px;
+            width: 19px;
+        }
+    }
+    .kme-sc-title {
+        display: block;
+        font-size: 12.6px;
+        font-weight: 800;
+        color: #1d394c;
+        line-height: 1.3;
+    }
+    .kme-sc-description {
+        display: block;
+        font-size: 10.5px;
+        color: #758c9c;
+        margin-top: 4px;
+        font-weight: 550;
+        line-height: 1.35;
+    }
+    .kme-sc-check {
+        margin-left: auto;
+        color: var(--kme-orange);
+        font-size: 20px;
+        font-weight: 900;
+        line-height: 1;
+        opacity: 0;
+    }
+    .kme-other-service {
+        margin-top: 11px;
+    }
+    .kme-other-button,
+    .kme-link-button {
+        display: inline-block;
+        position: relative;
+        padding: 8px 15px;
+        margin: 0;
+        background: #fff;
+        border: 1px solid #adc3d1;
+        border-radius: 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        color: var(--kme-navy);
+        font-weight: 800;
+        cursor: pointer;
+
+        &:hover {
+            background: #eaf2f6;
+        }
+    }
+    .kme-link-button:focus-visible,
+    .kme-other-button:has(.kme-service-input:focus-visible),
+    .kme-clear-button:focus-visible,
+    .kme-primary-button:focus-visible {
+        outline: 3px solid #61a7e3;
+        outline-offset: 3px;
+    }
+    .kme-other-check {
+        display: none;
+    }
+    .kme-other-button:has(.kme-service-input:checked) {
+        .kme-other-check {
+            display: inline;
+        }
+        .kme-other-plus {
+            display: none;
+        }
+    }
+
+    // 02 / 03 Fields --------------------------------------------------------
+    .kme-field-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+    .kme-field {
+        min-width: 0;
+        margin: 0;
+
+        .s_website_form_label {
+            display: block;
+            width: auto !important;
+            font-size: 12px;
+            font-weight: 850;
+            color: #2e4c60;
+            margin: 0 0 8px;
+            padding: 0;
+        }
+    }
+    .kme-hint {
+        font-weight: 500;
+        color: #95a3ae;
+    }
+    .form-control {
+        height: 44px;
+        border: 1px solid #d9e3e9;
+        color: var(--kme-ink);
+        background-color: #fff;
+        width: 100%;
+        padding: 0 13px;
+        border-radius: 6px;
+        font-size: 13px;
+        box-shadow: none;
+        transition: border-color 0.2s, box-shadow 0.2s;
+
+        &::placeholder {
+            color: #a2b1bb;
+            opacity: 1;
+        }
+        &:focus {
+            border-color: #d77f3b;
+            box-shadow: 0 0 0 3px rgba(230, 120, 35, 0.12);
+            outline: none;
+        }
+        &.is-invalid {
+            border-color: #d4553f;
+            background-image: none;
+            padding-right: 13px;
+        }
+        &.is-invalid:focus {
+            box-shadow: 0 0 0 3px rgba(212, 85, 63, 0.15);
+        }
+    }
+    textarea.form-control {
+        height: auto;
+        padding: 13px;
+        min-height: 116px;
+        resize: vertical;
+        line-height: 1.5;
+    }
+
+    // 04 Upload --------------------------------------------------------------
+    .kme-upload {
+        border: 1.5px dashed #a7bfce;
+        background: #f8fbfc;
+        padding: 26px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        transition: background-color 0.2s, border-color 0.2s;
+
+        &.kme-dragging {
+            background: #fff6eb;
+            border-color: #dc7b2c;
+        }
+        strong {
+            font-size: 13px;
+            color: var(--kme-navy);
+            text-align: center;
+        }
+        p {
+            font-size: 11px;
+            color: #728797;
+            line-height: 1.6;
+            text-align: center;
+            margin: 0;
+        }
+        // Odoo's own file chips/buttons are replaced by the list below.
+        .o_files_zone,
+        .o_add_files_button {
+            display: none !important;
+        }
+    }
+    .kme-upload-icon {
+        color: #35627b;
+        line-height: 0;
+
+        svg {
+            width: 27px;
+            height: 27px;
+        }
+    }
+    .kme-file-input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        opacity: 0;
+        pointer-events: none;
+    }
+    .kme-upload-feedback:not(:empty) {
+        background: #fff0ed;
+        color: #a33d31;
+        padding: 10px 14px;
+        border-radius: 5px;
+        margin-top: 12px;
+        font-size: 12px;
+        line-height: 1.5;
+        white-space: pre-line;
+    }
+    .kme-attachment-list {
+        margin: 15px 0 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 7px;
+
+        &:empty {
+            display: none;
+        }
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            padding: 9px 10px;
+            background: #f6f9fa;
+            border-radius: 6px;
+            color: #355367;
+            font-size: 12px;
+        }
+    }
+    .kme-file-name {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        min-width: 0;
+        overflow-wrap: anywhere;
+
+        svg {
+            width: 15px;
+            height: 15px;
+            flex-shrink: 0;
+            color: #35627b;
+        }
+    }
+    .kme-file-remove {
+        border: 0;
+        background: transparent;
+        color: #ad5c34;
+        font-size: 12px;
+        font-weight: 850;
+        padding: 4px;
+        flex-shrink: 0;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+        &:focus-visible {
+            outline: 3px solid #61a7e3;
+            outline-offset: 1px;
+        }
+    }
+    .kme-file-note {
+        font-size: 11px;
+        color: #8093a0;
+        margin-top: 12px;
+    }
+
+    // Confirmation checkbox --------------------------------------------------
+    .kme-consent {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 18px;
+        font-size: 12px;
+        color: #617888;
+        line-height: 1.55;
+        cursor: pointer;
+    }
+    .kme-checkbox {
+        margin-top: 3px;
+        width: 13px;
+        height: 13px;
+        flex-shrink: 0;
+        accent-color: var(--kme-orange);
+        cursor: pointer;
+
+        &:focus-visible {
+            outline: 3px solid #61a7e3;
+            outline-offset: 2px;
+        }
+    }
+    .kme-consent-field.o_has_error .kme-consent {
+        color: #a33d31;
+    }
+
+    // Service group error state
+    .kme-service-field.o_has_error .kme-service-card,
+    .kme-service-field.o_has_error .kme-other-button {
+        border-color: #d4553f;
+    }
+
+    // Status / validation message (Odoo renders it as #s_website_form_result)
+    .kme-status {
+        #s_website_form_result:empty {
+            display: none;
+        }
+        .text-danger {
+            display: block;
+            background: #fff0ed;
+            color: #a33d31 !important;
+            padding: 10px 14px;
+            border-radius: 5px;
+            margin: 12px 0 0 !important;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        .text-success {
+            display: block;
+            margin-top: 12px !important;
+            font-size: 12px;
+        }
+    }
+
+    // Actions ----------------------------------------------------------------
+    .kme-form-actions {
+        padding: 23px 32px 29px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 18px;
+    }
+    .kme-clear-button {
+        background: none;
+        border: 0;
+        color: #6b8291;
+        font-weight: 750;
+        font-size: 12px;
+        padding: 12px 0;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .kme-primary-button {
+        border: 0;
+        background: var(--kme-orange);
+        color: #fff;
+        padding: 16px 28px;
+        font-size: 13px;
+        font-weight: 850;
+        letter-spacing: 0.2px;
+        border-radius: 5px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        box-shadow: 0 5px 13px rgba(230, 120, 35, 0.14);
+        transition: background-color 0.2s;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            background: var(--kme-orange-dark);
+            color: #fff;
+        }
+        &.o_btn_loading,
+        &.disabled,
+        &:disabled {
+            opacity: 0.75;
+            cursor: wait;
+        }
+    }
+    .kme-form-meta {
+        font-size: 11px;
+        color: #8497a3;
+        line-height: 1.5;
+        padding: 0 32px 26px;
+    }
+
+    // Responsive -------------------------------------------------------------
+    @media (max-width: 1050px) {
+        .kme-form-section,
+        .kme-form-head,
+        .kme-form-actions {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+        .kme-form-meta {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+    @media (max-width: 760px) {
+        .kme-field-grid,
+        .kme-service-grid {
+            grid-template-columns: 1fr;
+        }
+        .kme-service-card {
+            min-height: 61px;
+        }
+        .kme-form-section,
+        .kme-form-head,
+        .kme-form-actions,
+        .kme-form-meta {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+        .kme-form-head .kme-form-title {
+            font-size: 20px;
+        }
+        .kme-form-actions {
+            flex-wrap: wrap;
+        }
+        .kme-primary-button {
+            width: 100%;
+            order: -1;
+        }
+    }
+}
+
+// Section layout ---------------------------------------------------------------
+// The designer's "Form Bold" section uses the builder's grid (fixed 50px rows).
+// The enquiry form is much taller than the original contact form, so on the
+// live page (not while editing) rows size to their content: the form keeps the
+// left 8 columns and the two sidebar boxes stack at their natural height on
+// the right, exactly as placed by the designer.
+body:not(.editor_enable) .kme-quote-layout.o_grid_mode {
+    @media (min-width: 992px) {
+        grid-auto-rows: auto;
+        grid-template-rows: auto auto 1fr;
+
+        > .kme-quote-main {
+            grid-area: 1 / 1 / 4 / 9 !important;
+        }
+        > .kme-quote-help {
+            grid-area: 1 / 9 / 2 / 13 !important;
+            align-self: start;
+        }
+        > .kme-quote-urgent {
+            grid-area: 2 / 9 / 3 / 13 !important;
+            align-self: start;
+        }
+    }
+    // On phones and tablets the form comes first, then the contact boxes
+    // (same order as the reference design).
+    @media (max-width: 991.98px) {
+        display: flex;
+        flex-direction: column;
+
+        > .kme-quote-main {
+            order: -1;
+            margin-bottom: 24px;
+        }
+    }
+}

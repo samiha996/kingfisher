@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+        Contact Us page for Kingfisher Marine Engineering.
+
+        The page content below is the designer's Website-builder version of
+        /contactus, carried over unchanged (hero, feature strip, sidebar,
+        emergency box). Only the basic contact form inside the "Form Bold"
+        section is replaced by the Ship Repair Enquiry form, which creates a
+        CRM lead (crm.lead).
+
+        Installing the module also applies this view on top of any
+        website-specific (builder-edited) copy of the Contact Us page.
+    -->
+    <template id="contactus_ship_repair_enquiry" name="Contact Us - Ship Repair Enquiry" inherit_id="website.contactus">
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap" class="oe_structure oe_empty">
+                <section class="s_cover o_cc o_cc5 o_colored_level oe_img_bg o_bg_img_center o_bg_img_origin_border_box pt0 s_custom_snippet pb48" data-scroll-background-ratio="0" data-snippet="s_cover" data-attachment-id="859" data-format-mimetype="image/webp" style="background-image: url(&quot;/web/image/860-c98f3496/c1.webp&quot;);" data-name="Custom Cover" data-resize-width="1849" data-original-id="859" data-original-src="/web/image/859-21ec929d/c1.jpg" data-mimetype-before-conversion="image/jpeg" data-mimetype="image/webp">
+                    <div class="s_allow_columns container">
+                        <div class="row">
+                            <div class="o_colored_level pb0 pt48 col-lg-6" data-scroll-background-ratio="0">
+                                <p>
+                                    <span class="o_small-fs"/>
+                                    <br/>
+                                </p>
+                                <p>
+                                    <span class="o_small-fs">
+                                        <font class="text-o-color-1">
+                                            <a href="/" class="o_translate_inline">HOME</a>&#160; |&#160; SHIP REPAIR ENQUIRIES&#160;
+                                        </font>
+                                    </span>
+                                    <br/>
+                                </p>
+                                <h1>Request a Quotation</h1>
+                                <p>Tell us about your vessel and repair requirements. Our team can review your specifications and drawings to understand the repair scope.</p>
+                                <p style="text-align: start;">&#160;
+                                    <br/>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_masonry_block o_colored_level o_cc s_custom_snippet pt8 o_cc1 pb0 bg-100" data-vcss="001" data-vxml="001" data-snippet="s_masonry_block" data-name="Custom Custom Masonry">
+                    <div class="container">
+                        <div class="row o_grid_mode" data-row-count="1" style="gap: 20px 10px;">
+                            <div class="o_grid_item text-center o_colored_level g-col-lg-4 justify-content-center g-height-1 col-lg-4" data-name="Block" style="grid-area: 1 / 1 / 2 / 5; z-index: 1;">
+                                <h6 style="text-align: start;">
+                                    <span class="h6-fs">
+                                        <font class="text-o-color-2">
+                                            <strong>
+                                                <span class="oi text-o-color-1" data-icon="directions_boat"/>&#160; &#160; All major ship repair categories
+                                            </strong>
+                                        </font>
+                                    </span>
+                                    <br/>
+                                </h6>
+                            </div>
+                            <div class="o_grid_item text-center g-col-lg-4 justify-content-center g-height-1 col-lg-4 o_colored_level" data-name="Block" style="z-index: 2; grid-area: 1 / 5 / 2 / 9;">
+                                <h6 style="text-align: start;">
+                                    <span class="h6-fs">
+                                        <font class="text-o-color-2">
+                                            <strong>
+                                                <span class="oi text-o-color-1" data-icon="receipt_long"/>&#160; &#160;&#160;Attach drawings &amp; work lists
+                                            </strong>
+                                        </font>
+                                    </span>
+                                    <br/>
+                                </h6>
+                            </div>
+                            <div class="o_grid_item text-center g-col-lg-4 justify-content-center g-height-1 col-lg-4 o_colored_level" data-name="Block" style="z-index: 3; grid-area: 1 / 9 / 2 / 13;">
+                                <h6 style="text-align: start;">
+                                    <span class="h6-fs">
+                                        <font class="text-o-color-2">
+                                            <strong>
+                                                <span class="oi oi-filled text-o-color-1" data-icon="account_circle"/>&#160; &#160;&#160;Direct commercial team contact
+                                            </strong>
+                                        </font>
+                                    </span>
+                                    <br/>
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="s_website_form_bold pt24 o_colored_level pb80" data-snippet="s_website_form_bold" data-name="Form Bold">
+                    <div class="container">
+                        <div class="row o_grid_mode kme-quote-layout" style="column-gap: 30px;" data-row-count="38">
+                            <div class="o_colored_level o_grid_item o_cc o_cc3 g-col-lg-4 g-height-9 col-lg-4 kme-quote-help" style="grid-area: 1 / 9 / 10 / 13; z-index: 1; --grid-item-padding-y: 20px; --grid-item-padding-x: 20px;">
+                                <p>We're here to help</p>
+                                <h3>Prefer to speak to us directly?</h3>
+                                <p>Send your complete repair scope by email or contact Kingfisher to discuss the next steps.</p>
+                                <p>General commercial enquiries&#160;
+                                    <br/>
+                                    <i class="oi oi-fw text-o-color-1" data-icon="mail" role="img"/>
+                                    <a href="mailto:info@kingfisheruae.com" class="o_translate_inline">
+                                        <font style="color: rgb(228, 115, 47);">info@kingfisheruae.com</font>
+                                    </a>
+                                </p>
+                                <p>Kingfisher office
+                                    <br/>
+                                    <i class="oi oi-fw text-o-color-1" data-icon="phone" role="img"/>
+                            &#160;&#160;+32(0)499 123 456&#160;
+                                </p>
+                                <p>Workshop and operational base
+                                    <br/>
+                                    <i class="oi oi-fw text-o-color-1" data-icon="location_on" role="img"/>
+                            &#160;&#160;Dubai Maritime City, Dubai, UAE
+                                </p>
+                            </div>
+                            <div class="o_colored_level o_grid_item col-lg-7 g-col-lg-8 g-height-38 col-lg-8 kme-quote-main" style="z-index: 2; grid-area: 1 / 1 / 39 / 9;">
+                                <h6>
+                                    <font class="text-o-color-1">Enquiry submission</font>
+                                </h6>
+                                <h2>Tell us what your vessel needs.</h2>
+                                <p class="lead">Select the repair category, provide your contact details and describe the work. Attach your repair specification or drawings if available.</p>
+                                <p class="lead">
+                                    <br/>
+                                </p>
+                                <section class="s_website_form kme-enquiry" data-vcss="001" data-snippet="s_website_form" data-name="Ship Repair Enquiry Form">
+                                    <div class="container">
+                                        <form id="contactus_form" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required kme-form" data-mark="*" data-model_name="crm.lead" data-success-mode="redirect" data-success-page="/contactus-thank-you" data-pre-fill="true" novalidate="novalidate">
+                                            <div class="s_website_form_rows kme-form-card">
+                                                <!-- Heading -->
+                                                <div class="kme-form-head">
+                                                    <h3 class="kme-form-title">Ship Repair Enquiry</h3>
+                                                    <p>Fields marked <span class="kme-required">*</span> are required. You can also submit a full repair specification rather than typing every work item.</p>
+                                                </div>
+
+                                                <!-- 01 Service -->
+                                                <div class="kme-form-section">
+                                                    <div class="kme-section-title">
+                                                        <div class="kme-number" aria-hidden="true">01</div>
+                                                        <div>
+                                                            <h4 id="kme_service_heading">Select the service required <span class="kme-required">*</span></h4>
+                                                            <small>Choose the service that best describes your enquiry</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="s_website_form_field s_website_form_custom s_website_form_required kme-service-field" data-type="selection" data-name="Field" role="radiogroup" aria-labelledby="kme_service_heading" aria-required="true">
+                                                        <div class="kme-service-grid">
+                                                            <label class="kme-service-card">
+                                                                <input type="radio" class="s_website_form_input kme-service-input" name="Service Required" value="Drydocking &amp; Special Surveys" data-service="drydocking" checked="checked" required="required"/>
+                                                                <span class="kme-sc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 2v4m-5 5h10m-8-5h6v5H9zM3 14l9-3 9 3-2 6-7-2-7 2z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M3 22c2 0 2-1.5 4-1.5S9 22 12 22s3-1.5 5-1.5 3 1.5 4 1.5" stroke="currentColor" fill="none" stroke-width="1.7"/></svg></span>
+                                                                <span class="kme-sc-text"><span class="kme-sc-title">Drydocking &amp; Special Surveys</span><span class="kme-sc-description">Scheduled docking and full repair scope</span></span>
+                                                                <span class="kme-sc-check" aria-hidden="true">✓</span>
+                                                            </label>
+                                                            <label class="kme-service-card">
+                                                                <input type="radio" class="s_website_form_input kme-service-input" name="Service Required" value="Afloat &amp; Emergency Repairs" data-service="afloat" required="required"/>
+                                                                <span class="kme-sc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 6v6l4 2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+                                                                <span class="kme-sc-text"><span class="kme-sc-title">Afloat &amp; Emergency Repairs</span><span class="kme-sc-description">Afloat attendance or urgent repairs</span></span>
+                                                                <span class="kme-sc-check" aria-hidden="true">✓</span>
+                                                            </label>
+                                                            <label class="kme-service-card">
+                                                                <input type="radio" class="s_website_form_input kme-service-input" name="Service Required" value="Propulsion &amp; Engine Overhauling" data-service="propulsion" required="required"/>
+                                                                <span class="kme-sc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M14 4a6 6 0 0 0-7 8l-4 4a3 3 0 0 0 5 5l4-4a6 6 0 0 0 8-7l-4 3-4-4z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span>
+                                                                <span class="kme-sc-text"><span class="kme-sc-title">Propulsion &amp; Engine Overhauling</span><span class="kme-sc-description">Engines, CPP, thrusters and gearboxes</span></span>
+                                                                <span class="kme-sc-check" aria-hidden="true">✓</span>
+                                                            </label>
+                                                            <label class="kme-service-card">
+                                                                <input type="radio" class="s_website_form_input kme-service-input" name="Service Required" value="Structural &amp; Fabrication" data-service="structural" required="required"/>
+                                                                <span class="kme-sc-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></span>
+                                                                <span class="kme-sc-text"><span class="kme-sc-title">Structural &amp; Fabrication</span><span class="kme-sc-description">Hull renewals, steel, piping and welding</span></span>
+                                                                <span class="kme-sc-check" aria-hidden="true">✓</span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="kme-other-service">
+                                                            <label class="kme-other-button">
+                                                                <input type="radio" class="s_website_form_input kme-service-input" name="Service Required" value="Other / Multiple Services" data-service="other" required="required"/>
+                                                                <span class="kme-other-check" aria-hidden="true">✓&#160; </span>Other / Multiple Services<span class="kme-other-plus" aria-hidden="true"> +</span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 02 Contact & vessel -->
+                                                <div class="kme-form-section">
+                                                    <div class="kme-section-title">
+                                                        <div class="kme-number" aria-hidden="true">02</div>
+                                                        <div>
+                                                            <h4>Contact &amp; vessel information</h4>
+                                                            <small>Who should our commercial team contact?</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="kme-field-grid">
+                                                        <div class="s_website_form_field s_website_form_required kme-field" data-type="char" data-name="Field">
+                                                            <label class="s_website_form_label" for="kme_contact_name"><span class="s_website_form_label_content">Your name</span><span class="kme-required"> *</span></label>
+                                                            <input id="kme_contact_name" type="text" class="form-control s_website_form_input" name="contact_name" placeholder="Full name" autocomplete="name" required="required" data-fill-with="name"/>
+                                                        </div>
+                                                        <div class="s_website_form_field s_website_form_required kme-field" data-type="char" data-name="Field">
+                                                            <label class="s_website_form_label" for="kme_partner_name"><span class="s_website_form_label_content">Company</span><span class="kme-required"> *</span></label>
+                                                            <input id="kme_partner_name" type="text" class="form-control s_website_form_input" name="partner_name" placeholder="Company / vessel operator" autocomplete="organization" required="required" data-fill-with="parent_name"/>
+                                                        </div>
+                                                        <div class="s_website_form_field s_website_form_required kme-field" data-type="email" data-name="Field">
+                                                            <label class="s_website_form_label" for="kme_email_from"><span class="s_website_form_label_content">Work email</span><span class="kme-required"> *</span></label>
+                                                            <input id="kme_email_from" type="email" class="form-control s_website_form_input" name="email_from" placeholder="name@company.com" autocomplete="email" required="required" data-fill-with="email"/>
+                                                        </div>
+                                                        <div class="s_website_form_field kme-field" data-type="char" data-name="Field">
+                                                            <label class="s_website_form_label" for="kme_phone"><span class="s_website_form_label_content">Phone / WhatsApp</span> <span class="kme-hint">(optional)</span></label>
+                                                            <input id="kme_phone" type="tel" class="form-control s_website_form_input" name="phone" placeholder="Include country code" autocomplete="tel" data-fill-with="phone"/>
+                                                        </div>
+                                                        <div class="s_website_form_field s_website_form_custom kme-field" data-type="char" data-name="Field">
+                                                            <label class="s_website_form_label" for="kme_vessel_name"><span class="s_website_form_label_content">Vessel name</span> <span class="kme-hint">(optional)</span></label>
+                                                            <input id="kme_vessel_name" type="text" class="form-control s_website_form_input" name="Vessel Name" placeholder="Vessel name"/>
+                                                        </div>
+                                                        <div class="s_website_form_field s_website_form_custom kme-field" data-type="char" data-name="Field">
+                                                            <label class="s_website_form_label" for="kme_location"><span class="s_website_form_label_content">Port / Current location</span> <span class="kme-hint">(optional)</span></label>
+                                                            <input id="kme_location" type="text" class="form-control s_website_form_input" name="Port / Current Location" placeholder="e.g. Dubai Maritime City"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 03 Repair requirements -->
+                                                <div class="kme-form-section">
+                                                    <div class="kme-section-title">
+                                                        <div class="kme-number" aria-hidden="true">03</div>
+                                                        <div>
+                                                            <h4>Repair requirements</h4>
+                                                            <small>Describe the work required or attach your specification</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="s_website_form_field s_website_form_required kme-field kme-field-full" data-type="text" data-name="Field">
+                                                        <label class="s_website_form_label" for="kme_description"><span class="s_website_form_label_content">Repair scope / enquiry description</span><span class="kme-required"> *</span></label>
+                                                        <textarea id="kme_description" class="form-control s_website_form_input" name="description" rows="5" placeholder="Briefly describe the work required, defects or services needed. You may attach a full repair specification below." required="required"/>
+                                                    </div>
+                                                </div>
+
+                                                <!-- 04 Supporting documents -->
+                                                <div class="kme-form-section">
+                                                    <div class="kme-section-title">
+                                                        <div class="kme-number" aria-hidden="true">04</div>
+                                                        <div>
+                                                            <h4 id="kme_documents_heading">Supporting documents</h4>
+                                                            <small>Optional — useful for technical reviews and estimating</small>
+                                                        </div>
+                                                    </div>
+                                                    <div class="s_website_form_field s_website_form_custom kme-upload-field" data-type="binary" data-name="Field">
+                                                        <div class="kme-upload">
+                                                            <span class="kme-upload-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M12 16V3m-5 5 5-5 5 5M4 16v4h16v-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                                                            <strong>Drop files here, or browse your device</strong>
+                                                            <p>Repair specifications, work lists, drawings, machinery documents, photos<br/>PDF, DOCX, XLSX, JPG, PNG and related formats</p>
+                                                            <button type="button" class="kme-link-button kme-browse-button" aria-describedby="kme_documents_heading">Choose Files</button>
+                                                            <input id="kme_supporting_documents" type="file" class="s_website_form_input kme-file-input" name="kme_supporting_documents" multiple="multiple" tabindex="-1" aria-hidden="true" accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png,.webp,.txt"/>
+                                                        </div>
+                                                        <div class="kme-upload-feedback" role="alert" aria-live="assertive"/>
+                                                        <ul class="kme-attachment-list" aria-label="Selected documents"/>
+                                                        <div class="kme-file-note">Up to 15 MB per file. Selected documents are uploaded and attached to your enquiry when you submit.</div>
+                                                    </div>
+                                                    <div class="s_website_form_field s_website_form_custom s_website_form_required kme-consent-field" data-type="boolean" data-name="Field">
+                                                        <label class="kme-consent" for="kme_confirm">
+                                                            <input id="kme_confirm" type="checkbox" class="s_website_form_input kme-checkbox" name="Information Sharing Confirmed" value="Yes" required="required"/>
+                                                            <span>I confirm the information provided is appropriate to share with Kingfisher Marine Engineering. <span class="kme-required">*</span></span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="kme-status" role="status" aria-live="polite">
+                                                        <span id="s_website_form_result"/>
+                                                    </div>
+                                                </div>
+
+                                                <!-- Hidden fields: lead title (finalised server-side) and form marker -->
+                                                <div class="s_website_form_field s_website_form_dnone s_website_form_model_required" data-type="char" data-name="Field">
+                                                    <input type="hidden" class="form-control s_website_form_input" name="name" value="Ship Repair Enquiry"/>
+                                                </div>
+                                                <div class="s_website_form_field s_website_form_custom s_website_form_dnone" data-type="char" data-name="Field">
+                                                    <input type="hidden" class="form-control s_website_form_input" name="kme_ship_repair_enquiry" value="1"/>
+                                                </div>
+
+                                                <!-- Actions -->
+                                                <div class="s_website_form_submit s_website_form_no_submit_label kme-form-actions" data-name="Submit Button">
+                                                    <button type="button" class="kme-clear-button">Clear form</button>
+                                                    <button type="submit" class="kme-primary-button s_website_form_send">SUBMIT ENQUIRY &#160; →</button>
+                                                </div>
+                                                <div class="kme-form-meta">Your enquiry and documents go directly to Kingfisher Marine Engineering's commercial team.</div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="o_grid_item o_cc g-col-lg-4 o_colored_level g-height-6 col-lg-4 o_cc4 kme-quote-urgent" style="--grid-item-padding-y: 20px; --grid-item-padding-x: 20px; z-index: 3; grid-area: 10 / 9 / 16 / 13;">
+                                <h3>Emergency or time-critical repair?</h3>
+                                <p>
+                                    <span class="o_small-fs">For urgent attendance, call our office directly in addition to sharing your repair details. Availability and response times require confirmation.</span>
+                                </p>
+                                <h6>
+                                    <br/>
+                                </h6>
+                                <p>
+                                    <a href="#" class="o_translate_inline btn btn-custom bg-o-color-2" style="color: rgb(255, 255, 255); border: 0.8px solid rgb(27, 19, 25);">&#160;&#160;&#160;Call Kingfisher → &#160;</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+</odoo>
